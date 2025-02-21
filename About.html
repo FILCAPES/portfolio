@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Go High Level Expert | About Me - Automation Specialist">
+    <title>About Me - Go High Level Expert</title>
+    <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+     <nav class="container">
+        <div class="logo-box">
+            <a href="index.html">
+                <img src="Images/Image1.jpg" alt="Logo" class="logo">
+            </a>
+        </div>
+        <div class="parent-link">
+            <a href="index.html" class="social-links">Home</a>
+            <a href="About.html" class="social-links active">About</a>
+            <a href="Services.html" class="social-links">Services</a>
+            <a href="Contact.html" class="social-links">Contact</a>
+        </div>
+    </nav>
+
+    <section class="header-container">
+        <h1>About <span>Me</span></h1>
+        <p>
+            Highly motivated and results-oriented freelancer specializing in Go High Level CRM, automation, and customer support.
+            I help businesses streamline operations through workflow automation, chatbot management, and appointment scheduling.
+        </p>
+
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('expertise', event)">My Expertise</p>
+            <p class="tab-links" onclick="opentab('achievements', event)">Achievements</p>
+            <p class="tab-links" onclick="opentab('skills', event)">Technical Skills</p>
+        </div>
+
+        <div class="tab-contents active-tab" id="expertise">
+            <ul>
+                <li><span>✅ CRM Management & Optimization</span><br>Configuring workflows, automations, and sales pipelines.</li>
+                <li><span>✅ Funnel & Website Development</span><br>Creating high-converting sales funnels and marketing websites.</li>
+                <li><span>✅ Email & SMS Marketing Automation</span><br>Setting up targeted campaigns and engagement tracking.</li>
+                <li><span>✅ Customer Support & Troubleshooting</span><br>Providing CRM-related assistance and technical support.</li>
+            </ul>
+        </div>
+
+        <div class="tab-contents" id="achievements">
+            <ul>
+                <li><span>📜 Go High Level Certification</span><br>Mastered workflow automation, appointment scheduling, and funnel management.</li>
+                <li><span>🎓 Comprehensive Training</span><br>Completed extensive training in CRM setup and AI chatbot development.</li>
+            </ul>
+        </div>
+
+        <div class="tab-contents" id="skills">
+            <ul>
+                <li><span>💻 Technical Proficiencies</span><br>Go High Level, API Integrations, Webhook Development.</li>
+                <li><span>🛠 Tools & Platforms</span><br>CRM Systems, Marketing Automation, Analytics Tools.</li>
+                <li><span>📱 Digital Marketing</span><br>Funnel Building, Email Marketing, SMS Campaigns.</li>
+                <li><span>🎥 Tutorials & Documentation</span><br>Creating SOPs, training guides, and video walkthroughs.</li>
+            </ul>
+        </div>
+
+        <a href="Contact.html" class="cta-button">Let's Work Together →</a>
+    </section>
+
+    <script>
+        function opentab(tabname, event) {
+            var tablinks = document.querySelectorAll(".tab-links");
+            var tabcontents = document.querySelectorAll(".tab-contents");
+            
+            tablinks.forEach(tab => tab.classList.remove("active-link"));
+            tabcontents.forEach(content => content.classList.remove("active-tab"));
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>

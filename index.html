@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Mobile Navigation */
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .parent-link {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 1rem 0;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            .parent-link.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="logo-box">
+            <img src="Images/Image1.jpg" alt="Logo" class="logo">
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="parent-link">
+            <a href="About.html" class="social-links">About</a>
+            <a href="Services.html" class="social-links">Services</a>
+            <a href="Contact.html" class="social-links">Contact</a>
+        </nav>
+    </header>
+
+    <section class="header-container">
+        <div class="hdr-container-inner">
+            <h1>Welcome to my digital space!</h1>
+            <h2>I specialize in creating powerful marketing automation and customer relationship management solutions.</h2>
+            <h3>Go High Level Expert</h3>
+            <hr>
+            <p>I help businesses automate their marketing processes and improve customer relationships through innovative solutions.</p>
+            <a href="Contact.html" class="btn">Get in Touch</a>
+        </div>
+        <div class="hdr-containter-img">
+            <img src="Images/Image5.png" alt="Profile Image" id="logo1">
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.parent-link');
+            
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
+
